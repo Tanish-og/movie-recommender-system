@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Install dependencies
-pip install -r requirements.txt
+# Create the .streamlit directory if it doesn't exist
+mkdir -p ~/.streamlit/
 
-# Create config.toml with proper content
-echo -e "[server]\nport=\nenableCORS=false\nheadless=true" > config.toml
+# Create the config.toml file with the necessary configurations
+echo -e "[server]\nport=$PORT\nenableCORS=false\nheadless=true" > ~/.streamlit/config.toml
 
 # Any other setup commands...
