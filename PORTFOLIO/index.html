@@ -1,0 +1,48 @@
+---
+layout: default
+title: Home
+---
+<section style="padding: 32px 0;">
+	<h1 style="font-size: 40px; margin: 0 0 8px 0;">{{ site.name }}</h1>
+	<p style="margin:0; color: var(--muted); max-width: 60ch;">{{ site.description }}</p>
+</section>
+
+<section id="projects" style="padding: 16px 0 8px 0;">
+	<h2 style="margin: 0 0 12px 0;">Projects</h2>
+	<div class="grid">
+		{% for project in site.data.projects %}
+		<article class="card">
+			<h3 style="margin-top:0;">
+				{% if project.url %}<a href="{{ project.url }}" target="_blank" rel="noopener">{{ project.name }}</a>{% else %}{{ project.name }}{% endif %}
+			</h3>
+			<p style="margin-top: 4px; color: var(--muted);">{{ project.description }}</p>
+			{% if project.tech %}
+				<div style="margin-top:8px;">
+					{% for t in project.tech %}<span class="tag">{{ t }}</span>{% endfor %}
+				</div>
+			{% endif %}
+		</article>
+		{% endfor %}
+	</div>
+</section>
+
+<section id="skills" style="padding: 24px 0 8px 0;">
+	<h2 style="margin: 0 0 12px 0;">Skills</h2>
+	<div class="grid">
+		{% for group in site.data.skills %}
+		<article class="card">
+			<h3 style="margin:0 0 8px 0;">{{ group.category }}</h3>
+			<div>
+				{% for item in group.items %}<span class="tag">{{ item }}</span>{% endfor %}
+			</div>
+		</article>
+		{% endfor %}
+	</div>
+</section>
+
+<section id="contact" style="padding: 24px 0;">
+	<h2 style="margin: 0 0 12px 0;">Contact</h2>
+	<p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+	<p>GitHub: <a href="https://github.com/yourusername" target="_blank" rel="noopener">@yourusername</a></p>
+	<p>LinkedIn: <a href="https://www.linkedin.com/in/yourusername/" target="_blank" rel="noopener">yourusername</a></p>
+</section>

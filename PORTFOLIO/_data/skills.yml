@@ -1,0 +1,23 @@
+- category: Languages
+  items: [JavaScript, Python]
+
+- category: Frontend
+  items: [HTML5, CSS3, React.js]
+
+- category: APIs
+  items: [REST, GraphQL]
+
+- category: Databases
+  items: [MySQL]
+
+- category: Auth & Security
+  items: [JWT, OAuth 2.0]
+
+- category: Deployment & Hosting
+  items: [Vercel, Netlify, Render, Railway]
+
+- category: Data Science & ML
+  items: [NumPy, Pandas, scikit-learn, Data preprocessing, Feature engineering]
+
+- category: NLP
+  items: [Hugging Face, spaCy, NLTK, BERT, GPT models]

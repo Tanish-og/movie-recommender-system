@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{ page.title }} | {{ site.title }}</title>
+	<meta name="description" content="{{ site.description }}">
+	<style>
+		:root { --bg: #0f172a; --panel:#0b1220; --text:#e2e8f0; --muted:#94a3b8; --accent:#22d3ee; }
+		* { box-sizing: border-box; }
+		html, body { margin:0; padding:0; background:var(--bg); color:var(--text); font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.container { max-width: 1000px; margin: 0 auto; padding: 24px; }
+		header { position: sticky; top:0; background: rgba(15,23,42,0.75); backdrop-filter: blur(8px); border-bottom: 1px solid #1f2937; }
+		nav { display:flex; gap: 16px; justify-content: flex-end; }
+		.brand { font-weight: 700; font-size: 18px; letter-spacing: .3px; }
+		.grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap:16px; }
+		.card { background: var(--panel); border:1px solid #1f2937; border-radius: 12px; padding:16px; }
+		.tag { display:inline-block; padding:2px 8px; border-radius:999px; border:1px solid #1f2937; color:var(--muted); margin: 2px 6px 2px 0; font-size:12px }
+		footer { border-top:1px solid #1f2937; margin-top:40px; color: var(--muted); }
+	</style>
+</head>
+<body>
+	<header>
+		<div class="container" style="display:flex; align-items:center; justify-content:space-between;">
+			<div class="brand">{{ site.name }}</div>
+			<nav>
+				<a href="#projects">Projects</a>
+				<a href="#skills">Skills</a>
+				<a href="#contact">Contact</a>
+			</nav>
+		</div>
+	</header>
+	<main class="container">
+		{{ content }}
+	</main>
+	<footer>
+		<div class="container">&copy; <span>{{ "now" | date: "%Y" }}</span> {{ site.name }} · Built with Jekyll</div>
+	</footer>
+</body>
+</html>

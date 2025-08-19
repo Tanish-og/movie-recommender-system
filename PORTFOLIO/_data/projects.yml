@@ -1,0 +1,9 @@
+- name: Movie Recommender System
+  url: https://github.com/Tanish-og/movie-recommender-system
+  description: Interactive web app that recommends similar movies using cosine similarity over embeddings.
+  tech: [Python, Flask, scikit-learn, HTML, CSS]
+
+- name: Portfolio Website (this site)
+  url: https://tanish-og.github.io/
+  description: Clean and minimal portfolio built with Jekyll and GitHub Pages.
+  tech: [Jekyll, Liquid, GitHub Actions]
